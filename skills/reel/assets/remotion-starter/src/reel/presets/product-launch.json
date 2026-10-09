@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "product-launch",
+  "label": "Product launch video",
+  "viewerOutcome": "Understand one product promise, see it work, and remember one credible reason to care.",
+  "formatDefaults": {
+    "aspectRatio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60
+  },
+  "durationDefaults": {
+    "minimumSeconds": 45,
+    "targetSeconds": 60,
+    "maximumSeconds": 90
+  },
+  "storyArc": [
+    {"id": "introduction", "targetPercent": 7},
+    {"id": "intent", "targetPercent": 13},
+    {"id": "visible-work", "targetPercent": 18},
+    {"id": "core-task", "targetPercent": 40},
+    {"id": "proof", "targetPercent": 14},
+    {"id": "close", "targetPercent": 8}
+  ],
+  "shotDefaults": {
+    "targetSecondsMinimum": 2,
+    "targetSecondsMaximum": 5,
+    "maximumSeconds": 6,
+    "maximumUnchangedNarratedSeconds": 2.5,
+    "minimumDistinctVisualStatesPerTenSeconds": 3
+  },
+  "assetDefaults": {
+    "dominantSource": "real product capture or source-backed UI",
+    "productUiRuntimeTargetPercent": "55-80",
+    "styleFrames": ["introduction", "core-task", "close"],
+    "motionTestSeconds": "6-10"
+  },
+  "audioDefaults": {
+    "narration": "optional",
+    "narrationModeWhenRequested": "enhanced",
+    "sound": "recommend free hosted AI BGM with automatic CC0/CC BY backup and required end credits, then confirm direction and audition; respect supplied licensed music or explicit silence; supplied interaction accents when available"
+  },
+  "failureConditions": [
+    "feature checklist or titled-slide sequence",
+    "unreadable product UI at normal playback size",
+    "click-to-success behavior without acknowledgement",
+    "unsourced proof point",
+    "one repeated layout or camera distance",
+    "decoration moves while the product story remains static"
+  ]
+}

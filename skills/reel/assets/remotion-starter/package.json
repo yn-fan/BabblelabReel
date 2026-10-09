@@ -1,0 +1,27 @@
+{
+  "name": "{{PACKAGE_NAME}}",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "compositions": "remotion compositions src/index.ts",
+    "render": "remotion render src/index.ts ProductReel out/reel.mp4 --codec=h264",
+    "still": "remotion still src/index.ts ProductReel out/preview.png",
+    "validate": "node scripts/validate-story.mjs",
+    "validate:starter": "node scripts/validate-story.mjs --allow-placeholders",
+    "qa:plan": "node scripts/build-review-plan.mjs",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.514",
+    "@remotion/media": "4.0.514",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.514"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "typescript": "5.9.3"
+  }
+}

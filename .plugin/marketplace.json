@@ -1,0 +1,14 @@
+{
+  "name": "babblelab",
+  "owner": {
+    "name": "BabblelabReel"
+  },
+  "plugins": [
+    {
+      "name": "babblelabreel",
+      "version": "1.0.0",
+      "description": "BabblelabReel standalone video production, download, compression, BGM, narration and imagery",
+      "source": "."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "vision-video",
+  "label": "Vision video",
+  "viewerOutcome": "Feel the present tension, imagine a coherent better future, and understand the directional invitation.",
+  "formatDefaults": {
+    "aspectRatio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "durationDefaults": {
+    "minimumSeconds": 60,
+    "targetSeconds": 90,
+    "maximumSeconds": 120
+  },
+  "storyArc": [
+    {"id": "present-reality", "targetPercent": 13},
+    {"id": "human-tension", "targetPercent": 12},
+    {"id": "possibility", "targetPercent": 13},
+    {"id": "future-vignettes", "targetPercent": 40},
+    {"id": "principles-and-credibility", "targetPercent": 14},
+    {"id": "invitation", "targetPercent": 8}
+  ],
+  "shotDefaults": {
+    "targetSecondsMinimum": 3,
+    "targetSecondsMaximum": 7,
+    "maximumSeconds": 8,
+    "maximumUnchangedNarratedSeconds": 4,
+    "minimumFutureVignettes": 2,
+    "maximumFutureVignettes": 4
+  },
+  "assetDefaults": {
+    "dominantSource": "human context, grounded scenarios, and meaningful environments",
+    "productUiRuntimeTargetPercent": "20-40",
+    "minimumHumanContextScenes": 3,
+    "humanContextMedia": "approved supplied or generated raster imagery or footage",
+    "rasterOrFootageRequiredForPeopleCenteredStories": true,
+    "vectorOnlyFallbackAllowed": false,
+    "maximumVectorGraphicRuntimePercent": 35,
+    "styleFrames": ["present-reality", "future-vignette", "invitation"],
+    "motionTestSeconds": "10-15"
+  },
+  "audioDefaults": {
+    "narration": "recommended after script approval",
+    "narrationModeWhenRequested": "enhanced",
+    "sound": "recommend free hosted AI BGM as emotional structure with automatic CC0/CC BY backup and required end credits, then confirm direction and audition; respect supplied licensed music or explicit silence"
+  },
+  "failureConditions": [
+    "roadmap, feature grid, or narrated presentation",
+    "one repeated UI shell or split layout",
+    "aspirational claims presented as shipped behavior",
+    "incoherent people, UI, typography, or color treatment",
+    "captions compete with the emotional subject",
+    "future is described without showing a changed human situation",
+    "planned human scenes silently degrade to kinetic type, diagrams, or avatar glyphs"
+  ]
+}

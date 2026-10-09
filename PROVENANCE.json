@@ -1,0 +1,445 @@
+{
+  "name": "BabblelabReel",
+  "version": "1.0.0",
+  "sourceRepository": "https://github.com/gim-home/Emma",
+  "sourceCommit": "95e5fc34757fe8dacdd0f55c0ada84c8572abe6c",
+  "scope": "Entire tracked Reel tree, complete audio/image children, canonical runtime path helpers and Reel regression tests",
+  "adaptations": [
+    "Independent public skill/plugin names; original internal paths retained",
+    "EMMA_* runtime namespace changed to BABBLELABREEL_*; separate user/state defaults",
+    "Standalone shared runtime/artifact contract; no full Emma startup or Knowledge dependency",
+    "External browser setup guidance replaces Emma-only initializer"
+  ],
+  "files": [
+    {
+      "path": "skills/reel/SKILL.md",
+      "sourceSha256": "ae14d1d5b2f13d2f7d76099c602fc843e8752e5c4fdf3cd611b2bbf3d6e7a1e3",
+      "exportSha256": "762b1ff8baee25e3d0fcc043b71cb6cb34fe32c16affbf6edd957ffb82edf190"
+    },
+    {
+      "path": "skills/reel/assets/music-library.json",
+      "sourceSha256": "4beb8260fd4c242ac0d5911425512e7d55b7745ca2fef50952b0d7e95393921a",
+      "exportSha256": "4beb8260fd4c242ac0d5911425512e7d55b7745ca2fef50952b0d7e95393921a"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/.gitignore",
+      "sourceSha256": "a74f9e00db2f10dd8b06d947911023e729c08eed37dac45ca1b6a805f0079969",
+      "exportSha256": "a74f9e00db2f10dd8b06d947911023e729c08eed37dac45ca1b6a805f0079969"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/REEL.md",
+      "sourceSha256": "8aabaccd1f3c1807b1334e667da412d0989d820de03479be8058b115e07f7b84",
+      "exportSha256": "8aabaccd1f3c1807b1334e667da412d0989d820de03479be8058b115e07f7b84"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/package.json",
+      "sourceSha256": "db39a9645bb382962998854e217b36a1830a4b4f3922751e8ccc0c443e853e12",
+      "exportSha256": "db39a9645bb382962998854e217b36a1830a4b4f3922751e8ccc0c443e853e12"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/scripts/build-review-plan.mjs",
+      "sourceSha256": "5e8a5af73b6eb618993317336a991b81a40758b3fbf95f48b9ae91382b830f02",
+      "exportSha256": "5e8a5af73b6eb618993317336a991b81a40758b3fbf95f48b9ae91382b830f02"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/scripts/validate-mp3.mjs",
+      "sourceSha256": "4012be216a3f1b1bab1d4638e71bd8bb0ae24042e2f2a3358356de64cbce7d58",
+      "exportSha256": "4012be216a3f1b1bab1d4638e71bd8bb0ae24042e2f2a3358356de64cbce7d58"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/scripts/validate-music.mjs",
+      "sourceSha256": "708fb63d840a1e3ae9bbbf9f2e84fe539c6e57bc783fc3ed1c252d7538c18ad8",
+      "exportSha256": "708fb63d840a1e3ae9bbbf9f2e84fe539c6e57bc783fc3ed1c252d7538c18ad8"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/scripts/validate-story.mjs",
+      "sourceSha256": "b1826ce4e2e2f77bc5472aa6772611fbb32269df27d6c2e1e07d243ceccdf2fc",
+      "exportSha256": "b1826ce4e2e2f77bc5472aa6772611fbb32269df27d6c2e1e07d243ceccdf2fc"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/Root.tsx",
+      "sourceSha256": "6bc87768d5c55a97554e8799ec49523b3774b332ca712969ea275ba76d86b543",
+      "exportSha256": "6bc87768d5c55a97554e8799ec49523b3774b332ca712969ea275ba76d86b543"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/index.ts",
+      "sourceSha256": "5462d3268136731ce43bfd7c5072ea1ba48b51fec94fa30076f5044f4b39e4a2",
+      "exportSha256": "5462d3268136731ce43bfd7c5072ea1ba48b51fec94fa30076f5044f4b39e4a2"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/AudioTrack.tsx",
+      "sourceSha256": "1b78b4452b7294806c836de19979c1486cfa6a761193d259759658b36824fb58",
+      "exportSha256": "1b78b4452b7294806c836de19979c1486cfa6a761193d259759658b36824fb58"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/CaptionTrack.tsx",
+      "sourceSha256": "f83643ab80fdfcaa27db9809a230d6e1bb32080ebd3feeedc92119261aa8f4a1",
+      "exportSha256": "f83643ab80fdfcaa27db9809a230d6e1bb32080ebd3feeedc92119261aa8f4a1"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/MusicCredits.tsx",
+      "sourceSha256": "371c61f2f30193d6756431158abf5d6ddea0a815aeee04cd2fa2baa89fe3174b",
+      "exportSha256": "371c61f2f30193d6756431158abf5d6ddea0a815aeee04cd2fa2baa89fe3174b"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/MusicTrack.tsx",
+      "sourceSha256": "ce22ba62935f358a6d642a4d173a4e5da10e9ff214a1bd730a4301a224dfa165",
+      "exportSha256": "ce22ba62935f358a6d642a4d173a4e5da10e9ff214a1bd730a4301a224dfa165"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/Reel.tsx",
+      "sourceSha256": "d458869d45761390c40c200dcd51dcd659cfb9dcd10c27967bd08e7b213fe1e3",
+      "exportSha256": "d458869d45761390c40c200dcd51dcd659cfb9dcd10c27967bd08e7b213fe1e3"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/content.ts",
+      "sourceSha256": "708c1d5029fd6e72b30939b51c4653e1664e3a1fa5c26dc70c1bb613ff138b75",
+      "exportSha256": "708c1d5029fd6e72b30939b51c4653e1664e3a1fa5c26dc70c1bb613ff138b75"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/music-envelope.ts",
+      "sourceSha256": "51bc968501423e7e91c52e08e71670bf4cb68fd8442cfbc2138c3378e498b5f4",
+      "exportSha256": "51bc968501423e7e91c52e08e71670bf4cb68fd8442cfbc2138c3378e498b5f4"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/presets/product-launch.json",
+      "sourceSha256": "d4b1d752bcc9bb6c1f22ee17ba1a93b0bd9cee2cc72b801cb41c69a5d2d09213",
+      "exportSha256": "d4b1d752bcc9bb6c1f22ee17ba1a93b0bd9cee2cc72b801cb41c69a5d2d09213"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/presets/vision-video.json",
+      "sourceSha256": "ed98bdd953f6a813a764226ff5d3607dc134d298c7f8936bc318177131f643ad",
+      "exportSha256": "ed98bdd953f6a813a764226ff5d3607dc134d298c7f8936bc318177131f643ad"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/story.json",
+      "sourceSha256": "971ece4f5d31b3f0b165c29af83d29c122ba90834b5632544d9ac316ea91016e",
+      "exportSha256": "971ece4f5d31b3f0b165c29af83d29c122ba90834b5632544d9ac316ea91016e"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/src/reel/treatments/tim-kochjar-reference.json",
+      "sourceSha256": "9d460ed1c8ac54ee09806dd04f4e9677323a94ecca49c591385f0397dbb1e817",
+      "exportSha256": "9d460ed1c8ac54ee09806dd04f4e9677323a94ecca49c591385f0397dbb1e817"
+    },
+    {
+      "path": "skills/reel/assets/remotion-starter/tsconfig.json",
+      "sourceSha256": "3b78b2e1ecf8c7c527348bfceee086173abdf5381b46f46a52ad3749ba6edc2f",
+      "exportSha256": "3b78b2e1ecf8c7c527348bfceee086173abdf5381b46f46a52ad3749ba6edc2f"
+    },
+    {
+      "path": "skills/reel/evals/evals.json",
+      "sourceSha256": "8c79d9040698615a1eca89f9559d261445cea83b95ee1c7308fd92d2b47ebed2",
+      "exportSha256": "2dccc5b18736f4c0e93f67d6664a512adfcdbf2c3479c26464bd5322cf49f1a1"
+    },
+    {
+      "path": "skills/reel/evals/files/production-REEL.md",
+      "sourceSha256": "d28aca9d2027cf754efeadeb3a5821b07304f072320131e8af11333ba1fb292a",
+      "exportSha256": "d28aca9d2027cf754efeadeb3a5821b07304f072320131e8af11333ba1fb292a"
+    },
+    {
+      "path": "skills/reel/evals/files/production-story.json",
+      "sourceSha256": "bd65cc20108722e0f5b5ed78a8a8b0307976104c15904205b949c48da8b70ce4",
+      "exportSha256": "bd65cc20108722e0f5b5ed78a8a8b0307976104c15904205b949c48da8b70ce4"
+    },
+    {
+      "path": "skills/reel/references/ai-bgm-research.md",
+      "sourceSha256": "fd6a37a2d259d16f3ecf64d10872b9db9fb94f749b5148f8fa006ed8c3fc17cc",
+      "exportSha256": "a70e6c9489500a68fb617948ca2c97b8fd4ed52c8db2ae4a86aa5b050a4cf63d"
+    },
+    {
+      "path": "skills/reel/references/ai-bgm.md",
+      "sourceSha256": "9053d9cabb4153eb649dfab0aea67d80fa4a48ce35aee77f4ccd284025845b34",
+      "exportSha256": "ba23063cefd0767766f8e5b0c8995fd777cc9c7fbd48613670f4384aef670096"
+    },
+    {
+      "path": "skills/reel/references/footage-editing.md",
+      "sourceSha256": "2a4908029b43a9f4efcb0e74d5ae6006490ea4ea0a154311d84a3780c15f7baf",
+      "exportSha256": "79e7effd9c00687d5955630b5683c3ef136ca568b3db010114d0af69a2cfc246"
+    },
+    {
+      "path": "skills/reel/references/jianying-handoff.md",
+      "sourceSha256": "dc7be5cc293b4b575c1105f776bf4e796d73d7559793bee6f4be85b15a159932",
+      "exportSha256": "9d6c005d955950913e2c2c74588fcd4989e0ff9d055d67e4502124b9ea369cdc"
+    },
+    {
+      "path": "skills/reel/references/library-bgm.md",
+      "sourceSha256": "0cda7ead991db07a495e7603e20bbf8cb8746aff6c7da1137be5c2dd889298f9",
+      "exportSha256": "0cda7ead991db07a495e7603e20bbf8cb8746aff6c7da1137be5c2dd889298f9"
+    },
+    {
+      "path": "skills/reel/references/motion-patterns.md",
+      "sourceSha256": "84d7c691cd53dba2a9e28573a5acc44f6b408efc7a8350972503ea4cc497648a",
+      "exportSha256": "84d7c691cd53dba2a9e28573a5acc44f6b408efc7a8350972503ea4cc497648a"
+    },
+    {
+      "path": "skills/reel/references/production-prompt.md",
+      "sourceSha256": "761d6cdeaee99fe6a3a265820f0ded74c0c5d567750d254f18173648bf5a4f03",
+      "exportSha256": "761d6cdeaee99fe6a3a265820f0ded74c0c5d567750d254f18173648bf5a4f03"
+    },
+    {
+      "path": "skills/reel/references/quickstart.md",
+      "sourceSha256": "de64fbf400fe102ce828af488ba15cf0ba0abee858f5e519cdd288d68f3c70c0",
+      "exportSha256": "ae8a276c49c2b1cc497820d62ea2dc5042a848e97bb07a76a1361c40cdcf811c"
+    },
+    {
+      "path": "skills/reel/references/remotion-integration.md",
+      "sourceSha256": "64292286f7504c5ac7e0b5e25cfae5671254819b4a29f450e6354fff8bc7b3f8",
+      "exportSha256": "05644e64f8cb05541942ad9fb3d12300341aceb49b217a89566080e733b3e2f6"
+    },
+    {
+      "path": "skills/reel/references/remotion-production.md",
+      "sourceSha256": "0e036786a07a7d295d85e03ddbbba4c8d02b72b96ae6dd349aec6299aba07754",
+      "exportSha256": "71c26761b353898842b73331260a2424ee2e29fadc064396d4435e86c45e58e2"
+    },
+    {
+      "path": "skills/reel/references/tim-kochjar-study.md",
+      "sourceSha256": "6b2da4635ec3980f6c64e933272ff8c416324706d78a444a857ce44d1cb76184",
+      "exportSha256": "6b2da4635ec3980f6c64e933272ff8c416324706d78a444a857ce44d1cb76184"
+    },
+    {
+      "path": "skills/reel/references/video-acquisition-backends.md",
+      "sourceSha256": "b54e130ccd68547ab48554251f2f0e2b8b088c36298bc9aa02faafea7ac8030b",
+      "exportSha256": "41bd77a866c5427d4793546320634ef6ebaa1f749cf9520f7ed56fb5a8008a96"
+    },
+    {
+      "path": "skills/reel/references/video-acquisition.md",
+      "sourceSha256": "0201a51483b604436270841109c05385231976c98a5c7e0f04eb84c469f1df77",
+      "exportSha256": "cc213b5680cfe445f445fc43cb891be19633fce64bc3e055835fb8c723c961a5"
+    },
+    {
+      "path": "skills/reel/references/video-compression.md",
+      "sourceSha256": "ad427feaa9da4e8d27f1298d6e80f8807730a2c87d84583f150c831f93350efc",
+      "exportSha256": "1815c871234eef270d30c4086434b2c0ad19f99773ed7478b779a15ffd88ef9b"
+    },
+    {
+      "path": "skills/reel/references/video-download-reliability-research.md",
+      "sourceSha256": "a096cb0178d5be7185f2ba7ef5f2f163c4dfe6aac4d79675eaff0c96080cb180",
+      "exportSha256": "a096cb0178d5be7185f2ba7ef5f2f163c4dfe6aac4d79675eaff0c96080cb180"
+    },
+    {
+      "path": "skills/reel/references/video-editing-integrations.md",
+      "sourceSha256": "d593904710360eb4321f45b90f36c04f16ef93c965671d6228c89c7451c143e8",
+      "exportSha256": "c47e509c976be8dadc75bbb8f9b02131bcfab698992e81726b92d740df7f2b4d"
+    },
+    {
+      "path": "skills/reel/references/video-shotcraft-study.md",
+      "sourceSha256": "a56a3eb9709672bcb1e5dd13260915215f28285efaa71737ec473c7aa3936d71",
+      "exportSha256": "a56a3eb9709672bcb1e5dd13260915215f28285efaa71737ec473c7aa3936d71"
+    },
+    {
+      "path": "skills/reel/references/video-talkcraft-study.md",
+      "sourceSha256": "b5b39658c67b3e8c28140acc21b6f884b1890bae3eefafd0d213956a78737cf5",
+      "exportSha256": "263aabd48073754dfa1f6e9c43890ce60260c30dabeb39d00791d5889cbee699"
+    },
+    {
+      "path": "skills/reel/references/video-type-defaults.md",
+      "sourceSha256": "96b55c9869a75a81e1c7c2462a77ee7483c671f589673110cd0fb2b184688609",
+      "exportSha256": "96b55c9869a75a81e1c7c2462a77ee7483c671f589673110cd0fb2b184688609"
+    },
+    {
+      "path": "skills/reel/scripts/analyze_media.py",
+      "sourceSha256": "651a9e261a48cbe4b2343f7906bdc20c289912284738618471730fcc862ad554",
+      "exportSha256": "651a9e261a48cbe4b2343f7906bdc20c289912284738618471730fcc862ad554"
+    },
+    {
+      "path": "skills/reel/scripts/compress_video.py",
+      "sourceSha256": "70d48081e4435dc04ddc0feab8c629a2c1e2f9f24c5830cacaa1463213cbc518",
+      "exportSha256": "70d48081e4435dc04ddc0feab8c629a2c1e2f9f24c5830cacaa1463213cbc518"
+    },
+    {
+      "path": "skills/reel/scripts/download_video.py",
+      "sourceSha256": "ccf9438e9503025315fe502088c3e75d527dcad2950db47687c0ad59c9a6bc43",
+      "exportSha256": "07f312b1d7665267b0d660e49cea1a673d9a6ce4240f8f6640ed0f9244d64e97"
+    },
+    {
+      "path": "skills/reel/scripts/edit_video.py",
+      "sourceSha256": "b5dfbc5551bb14d2916b691b8a548221f9fde117274e5e7cc92657194ed3c9c5",
+      "exportSha256": "b5dfbc5551bb14d2916b691b8a548221f9fde117274e5e7cc92657194ed3c9c5"
+    },
+    {
+      "path": "skills/reel/scripts/export_jianying.py",
+      "sourceSha256": "823b1aecf5029a5b6fb144055c08c81169efc0b57140268d99ccd27bb5f6db0c",
+      "exportSha256": "823b1aecf5029a5b6fb144055c08c81169efc0b57140268d99ccd27bb5f6db0c"
+    },
+    {
+      "path": "skills/reel/scripts/generate_bgm.py",
+      "sourceSha256": "f1a55ac99578293120c937ad903ea2deaf8850a541fb43ad6ada069265426ed6",
+      "exportSha256": "f1a55ac99578293120c937ad903ea2deaf8850a541fb43ad6ada069265426ed6"
+    },
+    {
+      "path": "skills/reel/scripts/hosted_bgm.py",
+      "sourceSha256": "c917b4b1ba2fd9d21845a6fd14e59e23a1c73ae1ba27c1e6e4e2ba563eca90a6",
+      "exportSha256": "c917b4b1ba2fd9d21845a6fd14e59e23a1c73ae1ba27c1e6e4e2ba563eca90a6"
+    },
+    {
+      "path": "skills/reel/scripts/incompetech_bgm.py",
+      "sourceSha256": "8f11cf455f23750ae358e8077cf1521c501a9a886549b437a758934bfc5b7110",
+      "exportSha256": "8f11cf455f23750ae358e8077cf1521c501a9a886549b437a758934bfc5b7110"
+    },
+    {
+      "path": "skills/reel/scripts/library_bgm.py",
+      "sourceSha256": "5bde8dd06722274e4efe219edf06ccd4934412c3f6a696e6f731fdce7b1b0216",
+      "exportSha256": "5bde8dd06722274e4efe219edf06ccd4934412c3f6a696e6f731fdce7b1b0216"
+    },
+    {
+      "path": "skills/reel/scripts/mp3_audio.py",
+      "sourceSha256": "a33d23b525eac80a642caf104a63e7439ae1882ce167067826f858b4c28fcee9",
+      "exportSha256": "a33d23b525eac80a642caf104a63e7439ae1882ce167067826f858b4c28fcee9"
+    },
+    {
+      "path": "skills/reel/scripts/preflight_reel.py",
+      "sourceSha256": "0def2f6c5f2ce5d3afd6a05eb3b8bea12ff61848954abea3f8b599350a1e78d8",
+      "exportSha256": "0def2f6c5f2ce5d3afd6a05eb3b8bea12ff61848954abea3f8b599350a1e78d8"
+    },
+    {
+      "path": "skills/reel/scripts/scaffold_reel.py",
+      "sourceSha256": "55945c26861181739f456663dc09d788cb66fcc4df1b838e6ad6b1da97479cf9",
+      "exportSha256": "55945c26861181739f456663dc09d788cb66fcc4df1b838e6ad6b1da97479cf9"
+    },
+    {
+      "path": "tools/audio-generator/SKILL.md",
+      "sourceSha256": "e8a542c4e28247dcc5c25e8d2f55fbb0c35c3c390cddb6da6e6f364d8d3c2bad",
+      "exportSha256": "48abacd2c9bbc2ad3af2c3757ae1bebbeb23de23698db5e182d8413a9482dc03"
+    },
+    {
+      "path": "tools/audio-generator/references/compatibility.md",
+      "sourceSha256": "5481e2f44ed4051e13e43be260978ed7985b880529fff71e0dd564fed5f0ea67",
+      "exportSha256": "2bbb9ef76effe131bf0dc9a9505cf5527c25c01a8f9b2b95e2ce1574423ec4fe"
+    },
+    {
+      "path": "tools/audio-generator/requirements-basic.txt",
+      "sourceSha256": "012e215c5dfa0a47524318596dd584e2d66b1f669dbcd8641d8587a5e9b5c39d",
+      "exportSha256": "012e215c5dfa0a47524318596dd584e2d66b1f669dbcd8641d8587a5e9b5c39d"
+    },
+    {
+      "path": "tools/audio-generator/requirements-enhanced.txt",
+      "sourceSha256": "07f26e916f036fa95293c7538a0c6f0e04b9f13acc6a7d7475c1c961cef25e8e",
+      "exportSha256": "07f26e916f036fa95293c7538a0c6f0e04b9f13acc6a7d7475c1c961cef25e8e"
+    },
+    {
+      "path": "tools/audio-generator/requirements.txt",
+      "sourceSha256": "33680cda39c8b6bbcae7670b6019758c945bae1a2d2d21c00e6f1dc563bc5769",
+      "exportSha256": "33680cda39c8b6bbcae7670b6019758c945bae1a2d2d21c00e6f1dc563bc5769"
+    },
+    {
+      "path": "tools/audio-generator/scripts/kokoro_audio.py",
+      "sourceSha256": "8845161b864663956629b540f70228f4a068f06e8229ce5eb32f3303defdeae2",
+      "exportSha256": "e3db3cbb88841601f8672f42cbf50a7cf1e3f7a5c38d957c0f97fefb4e735f56"
+    },
+    {
+      "path": "tools/audio-generator/tests/test_kokoro_audio.py",
+      "sourceSha256": "4a4fd638e9e102494479d3441bddffce96ed1cbc1b0a37678d053073971812d3",
+      "exportSha256": "12d3b3a8f22eaa5aab343eebd5f6e6a4fdcb478b15deca2a6318ba061a9adf5a"
+    },
+    {
+      "path": "tools/audio-generator/tests/test_kokoro_audio_integration.py",
+      "sourceSha256": "f019f0529b99f1df83e14aa8a9e9ea891a4aba783bd4060d01547060106139ca",
+      "exportSha256": "8b7505449417bb1cc532f201b64be42160a4a676f7fcd82fbe2949c5c22502b4"
+    },
+    {
+      "path": "tools/image-generator/SKILL.md",
+      "sourceSha256": "db5b7b60438e1e806c43c597c392c8765b24c4610666af5b25de312908cd7249",
+      "exportSha256": "7214b19b7189d65bb47efdb908328c36db96fd599b08525012f6e34bcf7d9804"
+    },
+    {
+      "path": "tools/image-generator/references/azure-openai.md",
+      "sourceSha256": "f1f2604b4cd8d0cbb025068b3526a24a0f091d88b750c9ee7336184c84836e2e",
+      "exportSha256": "f1f2604b4cd8d0cbb025068b3526a24a0f091d88b750c9ee7336184c84836e2e"
+    },
+    {
+      "path": "tools/image-generator/references/browser-providers.md",
+      "sourceSha256": "453c6db766d485a28879b9bba71f7a857ecb7d5df50c15204e7b1b5622eb4a99",
+      "exportSha256": "424fa5a1457080dc8d2429de0cd35c373b00878831fa71ae8c97d307578e6389"
+    },
+    {
+      "path": "tools/image-generator/scripts/azure_image.py",
+      "sourceSha256": "a40ae4993f14c6a07101c84450eddec7324e9184367cfa83f2888c009fb3a78d",
+      "exportSha256": "a40ae4993f14c6a07101c84450eddec7324e9184367cfa83f2888c009fb3a78d"
+    },
+    {
+      "path": "tools/image-generator/tests/test_azure_image.py",
+      "sourceSha256": "afbad52c7583ba8489c30c7ebbd8482dba00f0ae43dd748eeb7ad874a15218d4",
+      "exportSha256": "afbad52c7583ba8489c30c7ebbd8482dba00f0ae43dd748eeb7ad874a15218d4"
+    },
+    {
+      "path": "tools/scripts/runtime_config.py",
+      "sourceSha256": "1fa03603d1445a76db34f25fc660bbf1ccf4ffbc841f7ddb0f39ad31c61ae00a",
+      "exportSha256": "67cfa4823505aeb6914a4453c8b09ef92e154cbd9e8bb4f539060e1379a83962"
+    },
+    {
+      "path": "tools/scripts/user_paths.py",
+      "sourceSha256": "ba9b981c4b627bf0cc99efbf5e338929ac8f92822152ddb1054d7f4d8324f127",
+      "exportSha256": "7ea589a73492dfe8072f8a18889bdfcd4fe23f73a6f03709442794cb0a50adde"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_bgm.py",
+      "sourceSha256": "76dfa88459bb6bb9ace62242bb37a90b5da8d539798bf9da1929b56b86a9fe0a",
+      "exportSha256": "76dfa88459bb6bb9ace62242bb37a90b5da8d539798bf9da1929b56b86a9fe0a"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_compress.py",
+      "sourceSha256": "95ffc4609c8a0d48ec0ff1ca541f0236758d12edceee92230dd590e235cb0735",
+      "exportSha256": "95ffc4609c8a0d48ec0ff1ca541f0236758d12edceee92230dd590e235cb0735"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_compression_handoff.py",
+      "sourceSha256": "5a0d19a4b98e965a6b2dfd3066fe38b782d9262b6b5c6baaae4057f9da426205",
+      "exportSha256": "5a0d19a4b98e965a6b2dfd3066fe38b782d9262b6b5c6baaae4057f9da426205"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_edit_video.py",
+      "sourceSha256": "bea89ce6647acdfed9dd44ef56bf0a090cfe20e4ea035b8b2e2e02936abb8060",
+      "exportSha256": "bea89ce6647acdfed9dd44ef56bf0a090cfe20e4ea035b8b2e2e02936abb8060"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_hosted_bgm.py",
+      "sourceSha256": "b526c76c9f7e4d53b590fbdbd52dcc67c0f64e558858f3e946ca62a7bbd06872",
+      "exportSha256": "b526c76c9f7e4d53b590fbdbd52dcc67c0f64e558858f3e946ca62a7bbd06872"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_incompetech_bgm.py",
+      "sourceSha256": "922c7cc8e5fcb66e9a1c737440ae5406b6a7d23e338aa2fd5fcf2aa1a0b91a8d",
+      "exportSha256": "922c7cc8e5fcb66e9a1c737440ae5406b6a7d23e338aa2fd5fcf2aa1a0b91a8d"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_jianying.py",
+      "sourceSha256": "c9f7b50fcb5d7e83832e9c30b572815bd78f29d9787394f3df2a8ecbc07756a0",
+      "exportSha256": "c9f7b50fcb5d7e83832e9c30b572815bd78f29d9787394f3df2a8ecbc07756a0"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_library_bgm.py",
+      "sourceSha256": "4c4c8c00c0b1105367ab49fff4a9b88375bf484bf23859a639d2cb4c039e28b0",
+      "exportSha256": "4c4c8c00c0b1105367ab49fff4a9b88375bf484bf23859a639d2cb4c039e28b0"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_media_analysis.py",
+      "sourceSha256": "03066d7fe34211e96aae552940d9305a6e4d1e0349f2a0d55dabe7144d1cf242",
+      "exportSha256": "03066d7fe34211e96aae552940d9305a6e4d1e0349f2a0d55dabe7144d1cf242"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_mp3.py",
+      "sourceSha256": "cbb81ad6fadeed8e9e3e2b37c7b328ec4c306f188a97919cacf44c107a607ac0",
+      "exportSha256": "cbb81ad6fadeed8e9e3e2b37c7b328ec4c306f188a97919cacf44c107a607ac0"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_music_credits.py",
+      "sourceSha256": "b4b99bbd09942770e28fbbefc9bfcc4a3c2d5edb4baedeb1d937603dd9fbab8e",
+      "exportSha256": "b4b99bbd09942770e28fbbefc9bfcc4a3c2d5edb4baedeb1d937603dd9fbab8e"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_preflight.py",
+      "sourceSha256": "bc3fb0fd7d546bd7eb6072dc4f782fbc1558864682987b4742cd30fb3547f5e6",
+      "exportSha256": "bc3fb0fd7d546bd7eb6072dc4f782fbc1558864682987b4742cd30fb3547f5e6"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_starter.py",
+      "sourceSha256": "0015133ed71230f61c15677232b3db8ac63fbf85776d5f5d2085e7a01965c561",
+      "exportSha256": "0015133ed71230f61c15677232b3db8ac63fbf85776d5f5d2085e7a01965c561"
+    },
+    {
+      "path": "tools/skill-tester/test_reel_video_download.py",
+      "sourceSha256": "62f73a4f32e9cb2e047cb4489bf62acee9f3312501d8756b2db76fe0e8819834",
+      "exportSha256": "42843a83610110da614e8d08affcba6cfbea293a1e9ade36d4c232cb98f63033"
+    }
+  ]
+}

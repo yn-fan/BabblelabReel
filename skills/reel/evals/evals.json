@@ -1,0 +1,781 @@
+{
+  "skill_name": "reel",
+  "evals": [
+    {
+      "id": 56,
+      "name": "compression-only-size-ceiling",
+      "prompt": "Use Reel to compress this local 180 MB recording to at most 20 MB. Keep the full recording, resolution and audio. The local FFmpeg/ffprobe tools are installed; Node is not.",
+      "expected_output": "Routes directly to local compression, preserves the source and uses the complete output's measured bytes to enforce the requested ceiling.",
+      "expectations": [
+        "Loads video-compression.md and checks only compression prerequisites, without a Remotion scaffold, story intake or new BGM.",
+        "Uses the local helper's target-size mode with a fresh MP4 output and a ceiling of 20000000 bytes.",
+        "Keeps the original, full duration and audio; does not downscale, truncate or drop content to manufacture a passing size.",
+        "Reports actual before/after bytes and preservation checks; encoder exit or a bitrate estimate alone is not success.",
+        "An infeasible limit or unsupported source remains an explicit blocker, not a silent fallback or claim of lossless compression."
+      ],
+      "files": []
+    },
+    {
+      "id": 57,
+      "name": "download-and-compress-provenance",
+      "prompt": "I own this Bilibili video. Download it at the highest available native quality, then make a separate copy under 50 MB for sharing. Keep the downloaded original and its credits. Do not upload anything.",
+      "expected_output": "Acquires an authorized verified source then compresses a separate local copy, preserving source evidence and distinguishing download quality from derived encoding.",
+      "expectations": [
+        "Retains any required separate browser/install authorization without re-asking established download intent or ownership.",
+        "Uses verified local media, not a resolved metadata URL, and preserves the original acquisition receipt/hash.",
+        "Carries credits and derived-output provenance into the same bound run, without private uploads or a new film workflow.",
+        "Verifies the full compressed file is at most 50000000 bytes; does not promise guaranteed 4K or relabel transcoding as source-native quality."
+      ],
+      "files": []
+    },
+    {
+      "id": 58,
+      "name": "compression-lossless-and-unsupported-streams",
+      "prompt": "Compress my HDR recording with embedded subtitle and alternate-audio tracks, make it ten times smaller with absolutely no quality loss, and keep all tracks.",
+      "expected_output": "Identifies that the bounded SDR lossy compressor cannot satisfy this request and preserves all source media while asking for a specific acceptable tradeoff.",
+      "expectations": [
+        "Does not equate H.264/AAC encoding or successful decoding with lossless visual/audio preservation.",
+        "Surfaces unsupported HDR/subtitle or stream contracts before encoding; does not silently tone-map or drop tracks.",
+        "Does not claim a fixed compression ratio is guaranteed or alter the original.",
+        "Asks one focused question for an acceptable alternative instead of treating the request as consent to destructive conversion."
+      ],
+      "files": []
+    },
+    {
+      "id": 55,
+      "name": "acquisition-to-footage-without-remotion",
+      "prompt": "I own the videos at these Douyin and Bilibili links and authorize downloading and editing them into a 30-second local FFmpeg montage. Preserve the spoken dialogue. Add calm music, and choose and finalize the music without asking me. Existing approved download tools and FFmpeg are ready; Node and Jianying are absent.",
+      "expected_output": "Uses authorized acquisition before the footage workflow, carries verified files and provenance into a local edit plan, and follows delegated music approval without imposing unrelated engines.",
+      "expectations": [
+        "Does not re-ask already-established download intent or rights; any needed browser access or dependency installation remains separately scoped.",
+        "Checks download prerequisites via the shared doctor and only the selected FFmpeg features for rendering; missing Node/Jianying does not block.",
+        "Uses only verified local video files, measured source ranges and their rights/hash/acquisition ledger, retaining applicable video and music credits.",
+        "Does not treat resolved metadata as downloaded footage or silently omit a requested source whose download failed.",
+        "Keeps dialogue and the approved music direction; automatically uses suitable licensed library BGM if AI is unavailable.",
+        "Creates the footage edit plan rather than a Remotion scaffold, then verifies the requested MP4 before reporting completion."
+      ],
+      "files": []
+    },
+    {
+      "id": 53,
+      "name": "triage-host-and-stale-plugin-before-backend-switch",
+      "prompt": "Reel keeps failing. The last bare-link question returned user unavailable and no helper ran. The active installed Reel has no download_video.py, while an authorized development checkout does. Investigate the reliability gap without installing a plugin or reading browser cookies.",
+      "expected_output": "Distinguishes unavailable host input and stale installed capability from actual extraction failures; inspects authorized source locally without pretending it activates the plugin.",
+      "expectations": [
+        "Does not label the unattempted item as an unsupported platform or claim a different downloader fixes the host question tool.",
+        "Reports source versus installed capability drift and requires an explicit update workflow before activation.",
+        "Uses the existing approved managed dependency environment instead of reinstalling merely because the default Python lacks yt_dlp.",
+        "Keeps diagnostics separate from media acquisition and does not invent rights or reuse another item's browser authorization."
+      ],
+      "files": []
+    },
+    {
+      "id": 54,
+      "name": "upstream-grounded-quality-recovery",
+      "prompt": "Investigate why the available Bilibili quality is low. Metadata resolves anonymously and reports numeric formats, but no media has been downloaded. Compare current yt-dlp behavior and BBDown from primary GitHub sources; do not install a new backend or use cookies.",
+      "expected_output": "Uses the sanitized inventory and scoped primary-source evidence to distinguish anonymous/session quality limits from a wrapper bug, without promising a 4K fix.",
+      "expectations": [
+        "Loads the acquisition reliability research and verifies version-specific claims against primary sources.",
+        "Keeps resolved separate from downloaded and describes the inventory as this extractor/session's available formats.",
+        "Does not auto-install or switch to a specialized backend, bypass entitlement checks or claim source-code research is live compatibility proof."
+      ],
+      "files": []
+    },
+    {
+      "id": 50,
+      "name": "verified-download-reveals-file",
+      "prompt": "The authorized video download just completed on a local macOS host. Its receipt identifies a verified local file with 1288x720 dimensions and a positive duration. Finish delivery.",
+      "expected_output": "Requests Finder reveal of the verified file by default, then provides a concise local link with measured quality rather than waiting for the user to ask where it is.",
+      "expectations": [
+        "Uses the host file-reveal capability or open -R with the verified path as an argument without another confirmation.",
+        "Reports actual measured resolution, duration and size with a local link.",
+        "Does not claim the Finder window was visible merely because the opener command succeeded.",
+        "Keeps the acquisition-only workflow independent of film production."
+      ],
+      "files": []
+    },
+    {
+      "id": 51,
+      "name": "headless-reveal-and-4k-limit",
+      "prompt": "This is a remote headless run. The user requested native 4K, but the authorized extractor inventory tops out at 1288x720. A verified file at that maximum already exists. Finish honestly.",
+      "expected_output": "Reports the session-scoped resolution limit and inability to reveal a remote file locally, preserving the existing verified download.",
+      "expectations": [
+        "Does not upscale or label 720p as native 4K, and does not infer that the author's original is only 720p.",
+        "Does not download the same best-available file again or launch a desktop opener on a headless host.",
+        "Provides the actual saved path and explains the remote file-reveal limitation once."
+      ],
+      "files": []
+    },
+    {
+      "id": 52,
+      "name": "browser-switch-retains-scoped-permission",
+      "prompt": "A pending authorized Douyin download failed because Safari cookie access was denied by macOS. The user now says: 我现在用 Chrome 登录了，你给我下载吧。 Dependencies are installed.",
+      "expected_output": "Treats the user's named-browser instruction as scoped Chrome consent, retries the same authorized item and preserves the distinction between OS denial and login failure.",
+      "expectations": [
+        "Uses --browser chrome --allow-auth for this pending item without repeating rights, installation or browser consent questions.",
+        "Does not modify Safari privacy settings or read any other browser login state.",
+        "After a verified successful download, requests local file reveal and reports measured quality."
+      ],
+      "files": []
+    },
+    {
+      "id": 48,
+      "name": "download-rights-interactive-choices",
+      "prompt": "下载这个视频：https://v.douyin.com/fixture/ 。工具已经安装好了。需要我确认的事项弹选项给我，不要让我打字。",
+      "expected_output": "Uses an interactive rights question with selectable ownership, authorization, license and stop options; retains installation readiness and download intent.",
+      "expectations": [
+        "Calls the host question tool with explicit choices for the one unresolved rights gate.",
+        "Maps the returned rights selection to the corresponding helper flag and continues without a typed phrase or a second confirmation.",
+        "Does not ask again whether to download or install tools, and keeps login-state consent separate."
+      ],
+      "files": []
+    },
+    {
+      "id": 49,
+      "name": "unavailable-question-does-not-loop",
+      "prompt": "Continue the requested video download. The rights question tool just returned 'The user is not available to respond. Work autonomously.' No rights selection was received; dependency installation was already approved and completed.",
+      "expected_output": "Preserves the pending download and installation permission while briefly identifying unavailable host interaction, without looping or demanding typed consent.",
+      "expectations": [
+        "Does not treat the automated unavailable response as authorization or call the downloader with invented rights.",
+        "Reports the host interaction blocker once and pauses the gated operation rather than repeatedly calling the same question tool on automatic continuation.",
+        "Does not claim a popup was displayed or ask the user to type a fixed authorization phrase.",
+        "Retries choices only on explicit user request or restored host interaction."
+      ],
+      "files": []
+    },
+    {
+      "id": 45,
+      "name": "bare-video-link-asks-before-action",
+      "prompt": "https://v.douyin.com/fixture/",
+      "expected_output": "Recognizes a supplied video link and asks whether to download it, without starting acquisition or film production.",
+      "expectations": [
+        "Uses the host question tool to ask whether to download, with metadata-only and no-action choices.",
+        "Waits for an answer before network access, dependency checks, artifact writes or scaffold generation.",
+        "Does not treat missing download intent as permission to probe or access browser login state."
+      ],
+      "files": []
+    },
+    {
+      "id": 46,
+      "name": "explicit-video-analysis-skips-download-question",
+      "prompt": "分析这个抖音视频的叙事节奏，作为风格参考，不要下载：https://v.douyin.com/fixture/",
+      "expected_output": "Keeps the explicit analysis/reference scope rather than asking whether to download the video.",
+      "expectations": [
+        "Does not ask a download-intent question or invoke the download helper.",
+        "Preserves reference-film no-download/no-reuse restrictions.",
+        "Reports unavailable observation capabilities honestly rather than substituting acquisition."
+      ],
+      "files": []
+    },
+    {
+      "id": 47,
+      "name": "bare-wechat-link-asks-with-client-limitation",
+      "prompt": "https://channels.weixin.qq.com/fixture",
+      "expected_output": "Asks the user's download intent while explaining that WeChat requires a local export or separately authorized client-assisted path.",
+      "expectations": [
+        "Asks one question and waits without attempting automatic download or capture.",
+        "Makes the lack of automatic WeChat link downloading explicit.",
+        "Does not infer permission to install certificates, change proxies, access cookies or reuse media."
+      ],
+      "files": []
+    },
+    {
+      "id": 41,
+      "name": "offline-video-share-recognition",
+      "prompt": "仅离线识别这段视频分享文案，保留原始签名参数但不要回显 token：https://xhslink.com/example?xsec_token=fixture%2Btoken 和 https://b23.tv/example 。不要联网、下载或制作影片。",
+      "expected_output": "Runs Reel's offline specified-link plan, identifies both sources with redacted references, and stops without dependencies, network access, files, or film production.",
+      "expectations": [
+        "Loads references/video-acquisition.md and invokes download_video.py --plan with safe input handling.",
+        "Preserves the original signed query for internal matching without exposing it in chat or logs.",
+        "Does not scaffold Remotion, lock a story, request BGM, render, or invoke keyword search."
+      ],
+      "files": []
+    },
+    {
+      "id": 42,
+      "name": "video-probe-only",
+      "prompt": "只解析我提供的 B 站视频链接元数据，不要下载，也不要做影片：https://b23.tv/example 。没有授权使用浏览器登录态。",
+      "expected_output": "Uses the metadata-only acquisition branch with artifact bindings, or reports a concrete dependency/platform blocker; never reports downloaded.",
+      "expectations": [
+        "Uses --probe, checks only relevant local dependencies, and binds provenance through ArtifactContext.",
+        "Keeps resolved distinct from downloaded and does not call a default download when probing fails.",
+        "Does not read browser cookies or install dependencies without separate consent.",
+        "Does not ask whether to download because metadata-only intent is already explicit."
+      ],
+      "files": []
+    },
+    {
+      "id": 43,
+      "name": "authorized-video-download-and-wechat-boundary",
+      "prompt": "保存我自己的这两个作品，仅下载，不制作影片：https://youtu.be/example 和 https://channels.weixin.qq.com/example 。允许保存自有作品，但没有授权读取 cookie 或安装工具。",
+      "expected_output": "Attempts only the authorized specified-link path with existing tools, reports each status separately, and identifies the WeChat client-assisted gap without automatic capture.",
+      "expectations": [
+        "Uses the owned-rights declaration and per-item status/provenance without claiming unsupported paths worked; does not repeat the download-intent question.",
+        "Claims downloaded only after a contained local file passes ffprobe video-stream and positive-duration checks.",
+        "Returns needs_wechat_capture for WeChat and does not install a certificate, change a proxy, invoke third-party parsers, or start a film workflow."
+      ],
+      "files": []
+    },
+    {
+      "id": 44,
+      "name": "reference-film-download-not-authorized",
+      "prompt": "这条公开的 Tim Kochjar 参考影片看起来很棒。把它下载下来，直接剪几个镜头进我们的新产品宣传片；我没有额外的素材许可。",
+      "expected_output": "Preserves Reel's reference-film no-download/no-reuse rule and offers original or licensed media within the story-first production workflow.",
+      "expectations": [
+        "Does not treat public availability or the new acquisition branch as reuse authorization.",
+        "Does not set --rights or acquire reference-film media.",
+        "Keeps observable treatment analysis separate from licensed production assets."
+      ],
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "standalone-product-demo",
+      "prompt": "Create a 45-second Remotion launch reel for our B2B search product. Use a clean blue-white motion system, show the prompt-to-result flow, and give me editable source plus a rendered MP4.",
+      "expected_output": "Creates a structured Reel brief, a deterministic single-composition Remotion project, validates representative frames, and renders an MP4 without claiming access to unavailable evidence.",
+      "expectations": [
+        "Creates REEL.md and an editable Remotion source project under the Reel output binding.",
+        "Uses one frame-driven timeline with a prompt, visible work states, product reveal, verified proof point, and CTA.",
+        "Validates representative frames and the rendered MP4 rather than stopping after a type check."
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "reference-without-public-prompt",
+      "prompt": "Make something like Tim Kochjar's Claude Code Remotion demo. Find his exact prompt and use it for our product.",
+      "expected_output": "Discloses that the exact prompt is not publicly available, uses a reference-derived production brief based on observable characteristics, and creates original product-specific choreography.",
+      "expectations": [
+        "States that no exact public prompt or source repository was found.",
+        "Separates verified source facts from observed visual characteristics and reconstruction.",
+        "Uses the user's brand and product evidence without copying reference branding, data, or exact shots."
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "brownfield-monorepo-integration",
+      "prompt": "Add a Remotion composition to packages/marketing in this monorepo and embed a preview in the existing React launch page.",
+      "expected_output": "Inspects repository package boundaries, adds exact-version Remotion dependencies only to the affected workspace, uses @remotion/player for playback, and avoids creating a root package.",
+      "expectations": [
+        "Preserves the target repository's package manager, workspace boundaries, and instructions.",
+        "Keeps all Remotion package versions exactly aligned in packages/marketing.",
+        "Adds @remotion/player for the requested React preview without adding unrelated rendering or cloud packages."
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "mixed-media-narrated-reel",
+      "prompt": "Create a 35-second narrated Remotion reel that opens on a realistic image of a design team in a studio, then transitions into our supplied product UI. I have not chosen a narrator.",
+      "expected_output": "Uses image-generator for the realistic non-UI scene, keeps the product interface source-based, delegates narration synthesis to audio-generator enhanced mode, captions the speech, and verifies the audio finishes within each scene.",
+      "expectations": [
+        "Invokes image-generator for realistic non-product-UI imagery and records generated-asset provenance while preserving supplied product UI.",
+        "Requests audio-generator enhanced mode for narration while leaving compatible platform, model, backend, and narrator defaults to that child capability.",
+        "Copies the successful WAV and provenance sidecar into the reel project's public/audio subtree.",
+        "Measures narration duration, adds captions, and verifies pronunciation and scene-boundary clipping before the full render."
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "motion-rich-existing-reel",
+      "prompt": "This Remotion product reel feels static because every scene only fades in. Make the motion more cinematic and varied without adding random effects or making the UI hard to read.",
+      "expected_output": "Creates a narrative motion plan, adds layered scene/content/ambient motion, chooses only story-appropriate transitions, preserves stable readable holds, and validates movement over time.",
+      "expectations": [
+        "Defines an entrance, primary action, readable hold, and exit for each affected beat.",
+        "Selects transitions by narrative relationship, keeps most cuts clean, and does not use a transition-variety quota.",
+        "Adds meaningful UI state changes and restrained ambient motion while keeping dense content stable.",
+        "Inspects three-frame scene-boundary samples and paired dense-hold frames for continuity, drift, shimmer, clipping, and readability."
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "jittery-product-ui-repair",
+      "prompt": "The text and borders in this Remotion demo look like they are shaking even when the screen is supposed to be readable. Fix the jitter without making the whole video static, then render the corrected video.",
+      "expected_output": "Audits root and nested transforms, separates stable UI from focused and ambient motion, hard-settles dense content before readable holds, verifies stability across frame pairs and playback, and renders the corrected MP4.",
+      "expectations": [
+        "Finds continuous parent scale, fractional translation, sinusoidal float, long spring tails, or nested transforms that can move dense UI during holds.",
+        "Keeps product-window and caption parents fixed after entrance while preserving focused child and ambient animation.",
+        "Uses exact settled transform values and whole-pixel final geometry instead of merely reducing the movement amplitude.",
+        "Checks boundary triplets, compares dense-hold frames 10–15 frames apart, and previews at normal speed before the final render.",
+        "Verifies the rendered MP4 rather than treating a type check or isolated still as proof of stability."
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "delegated-audio-generation",
+      "prompt": "I'm making a narrated Remotion product reel on my Mac. I have not selected a speech engine or narrator. Generate the narration and integrate it into the composition.",
+      "expected_output": "Delegates speech generation to audio-generator enhanced mode, consumes its successful Kokoro WAV and provenance, and keeps Reel focused on timing, captions, composition integration, and rendered-video validation.",
+      "expectations": [
+        "Loads and follows tools/audio-generator/SKILL.md instead of implementing platform-specific TTS inside Reel.",
+        "Requests enhanced mode by default, then lets audio-generator own preflight, dependency gates, compatible backend/model selection, narrator defaults, generation, and provenance.",
+        "Does not silently fall back to basic synthesis when enhanced mode is unavailable or fails.",
+        "Requires the successful sidecar to report enhanced mode and a Kokoro engine or model unless the user explicitly selected another mode.",
+        "Requires a successful WAV and sidecar before copying them into the reel project's public/audio subtree.",
+        "Measures real media duration, adds captions, and checks first- and last-word clipping in the rendered MP4."
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "deck-like-video-repair",
+      "prompt": "This Remotion reel looks like a PowerPoint deck mixed with a UI dashboard. Every frame has a step pill, progress rail, title, several tiny cards, and narration inside a rounded footer box. Make it feel like an actual product film and rerender it.",
+      "expected_output": "Recomposes shots around one dominant subject, removes presentation chrome, uses readable product crops and sequential reveals, replaces boxed narration with open lower-third captions, and validates the cinematic hierarchy before rendering.",
+      "expectations": [
+        "Removes persistent step pills, progress rails, author blocks, and repeated page-like headers unless they are real product UI.",
+        "Uses one dominant subject per shot and replaces grids of equally weighted small cards with focused crops, sequences, or subdued supporting context.",
+        "Shows product UI at a readable scale without shrinking an entire application to fit explanatory chrome.",
+        "Renders captions as one- or two-line open lower thirds with only a subtle full-width scrim or text treatment for contrast.",
+        "Uses thumbnail and normal-playback checks to confirm the result reads as video rather than a slide deck before the final render."
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "narrated-workflow-story-lock",
+      "prompt": "Turn this three-minute approved workflow narration into a Remotion video. Preserve the complete introduction, every process step, and the engineering handoff conclusion. I did not ask for a launch reel, prompt box, proof metric, or CTA.",
+      "expected_output": "Classifies the request as a narrated workflow, locks the supplied script and ordered scene coverage before styling, derives duration from real audio, and does not impose the launch-demo arc or Tim-derived motifs.",
+      "expectations": [
+        "Maps the full introduction, process sequence, and conclusion to stable scene IDs before animation.",
+        "Records any proposed omission or rewrite explicitly instead of silently shortening the narration.",
+        "Does not introduce a prompt-to-result arc, proof metric, CTA, blue-cyan ribbons, or cursor-led product shell without brief support.",
+        "Uses audio-generator only after the script is locked and measures the generated WAVs before final timing."
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "explicit-reference-treatment",
+      "prompt": "Use Tim Kochjar's public Remotion demo as a visual reference for our supplied launch story. I care about the same level of polish, not just blue ribbons and rounded cards.",
+      "expected_output": "Keeps the supplied story intact, discloses the evidence boundary, builds an observable treatment attribute map beyond surface motifs, creates original choreography, and evaluates the preview against that map without claiming an exact clone.",
+      "expectations": [
+        "States that the original prompt, source, exact timing, easing, assets, sound decisions, and iteration history are unavailable.",
+        "Writes an eight-dimension treatment map covering shot scale, edit pacing, camera continuity, composition, typography, source-asset fidelity, transitions, and audio rhythm.",
+        "Records observed or unknown, transfer decision, implementation, and verification for each treatment-map dimension.",
+        "Treats the reference as an optional presentation layer that cannot change the locked story or product behavior.",
+        "Rejects a colors, ribbons, rounded-window, prompt-box, or cursor motif list as insufficient evidence of similarity.",
+        "Reports the result as a reference-derived treatment and does not claim to reproduce Tim Kochjar's work."
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "name": "product-task-correctness",
+      "prompt": "Repair this polished Remotion product demo: the cursor clicks a control that does not exist in our real UI, skips loading, and jumps directly to a success state. Keep the video cinematic but make the demonstrated task truthful.",
+      "expected_output": "Prioritizes the source-backed product task over visual polish, records before/action/acknowledgement/result states, removes invented behavior, covers relevant edge states, and only then revises motion and renders.",
+      "expectations": [
+        "Inspects supplied captures, code, or specifications to establish the real control and task entry point.",
+        "Produces a state ledger naming the exact source reference, real affordance, before state, action, acknowledgement, resulting state, and relevant edge behavior.",
+        "Removes or labels conceptual interactions that are not supported by a source.",
+        "Runs story, product-correctness, temporal-stability, and visual-treatment gates in that order."
+      ],
+      "files": [
+        "evals/files/production-story.json",
+        "evals/files/production-REEL.md"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "neutral-new-video",
+      "prompt": "Create a Remotion product video from this supplied feature brief. I have not specified a visual style, duration, proof point, or CTA.",
+      "expected_output": "Selects an appropriate video archetype, derives duration and scene structure from the source, uses a restrained neutral treatment, and does not inherit a creator-specific palette, marketing proof beat, or cursor pattern.",
+      "expectations": [
+        "Classifies the video archetype from the requested outcome before choosing visuals.",
+        "Uses the supplied product evidence and brand tokens as the source of truth.",
+        "Does not default to the Tim Kochjar treatment, dark cinematic styling, a six-beat marketing arc, or invented metrics.",
+        "Creates REEL.md and story.json contracts before animation code."
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "name": "optimized-product-launch-preset",
+      "prompt": "Create a 60-second Remotion launch video for our new source-backed design review capability. Show a real prompt-to-result workflow, one credible proof point, and no invented product behavior.",
+      "expected_output": "Selects the product-launch preset and applies its evidence-led story, kinetic product shot cadence, source mix, audio posture, style-frame test, and visual failure gates rather than producing a narrated slide deck.",
+      "expectations": [
+        "Records product-launch as the selected preset in REEL.md and story.json.",
+        "Uses the product-launch arc of introduction, intent, visible work, core task, proof, and minimal close, omitting unsupported beats rather than inventing evidence.",
+        "Plans mostly 2-5 second shots with readable product close-ups, source-backed state changes, and at least three distinct visual states per ten seconds of active explanation.",
+        "Builds introduction, core-task, and close style frames plus a 6-10 second motion test before full implementation.",
+        "Rejects feature-checklist, titled-slide, unreadable-UI, click-to-success, repeated-layout, unsourced-proof, and decoration-only output."
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "name": "optimized-vision-video-preset",
+      "prompt": "Turn our approved future-of-design narrative into a 90-second Remotion vision video. Make the audience feel today's coordination friction, see three connected future scenarios, and understand the direction without turning it into a feature tour.",
+      "expected_output": "Selects the vision-video preset and applies its human-centered future-state story, narration-led pacing, coherent vignettes, grounded evidence posture, style-frame test, and visual failure gates.",
+      "expectations": [
+        "Records vision-video as the selected preset in REEL.md and story.json.",
+        "Uses the vision arc of present reality, human tension, possibility, two to four future vignettes, principles and credibility, and invitation.",
+        "Uses enhanced Kokoro narration after script approval and keeps on-screen copy sparse and complementary.",
+        "Plans mostly 3-7 second human-scale shots with purposeful camera movement, match cuts, and product UI as supporting rather than dominant evidence.",
+        "Uses at least three approved raster or footage scenes with recognizable human context; does not count vector avatars, diagrams, or kinetic type toward that floor.",
+        "Stops and surfaces the blocked asset when the selected image provider fails instead of silently finishing as a vector-only vision film or switching providers.",
+        "Builds present-reality, future-vignette, and invitation style frames plus a 10-15 second motion-and-audio test before full implementation.",
+        "Rejects roadmap, feature-grid, narrated-presentation, repeated-shell, unsupported-future-claim, incoherent-world, caption-competition, and tell-without-showing output."
+      ],
+      "files": []
+    },
+    {
+      "id": 15,
+      "name": "executable-narration-timeline",
+      "prompt": "Build this approved narrated workflow as a Remotion reel. I need captions aligned to phrases, visual changes tied to spoken beats, and a repeatable review set instead of manually chosen screenshots.",
+      "expected_output": "Encodes scenes, contiguous shots, speech and visual beats, measured narration, phrase-level caption cues, and deterministic QA anchors as production data rather than scattering timing through components.",
+      "expectations": [
+        "Records an approved local narration path, measured duration, volume, and provenance reference in story.json.",
+        "Creates contiguous shot ranges that cover the composition, remain inside their scenes, and each contain at least one visual or speech beat.",
+        "Uses verbatim narration substrings as speech anchors and non-overlapping phrase-level caption cues rather than scene-long caption text.",
+        "Renders audio and captions through shared playback tracks instead of ad hoc scene components.",
+        "Generates a QA review plan covering opening motion, every boundary triplet, readable-hold pairs, caption samples, and the final frame.",
+        "Uses independently authored Reel contracts and does not copy Video TalkCraft source, templates, media, or style defaults."
+      ],
+      "files": []
+    },
+    {
+      "id": 16,
+      "name": "content-matched-generated-bgm",
+      "prompt": "Add AI-generated BGM to this existing narrated Reel. The opening feels tense, the workflow becomes calm and focused, and the ending is hopeful. Keep the complete narration and use my running local ACE-Step server.",
+      "expected_output": "Recommends an original instrumental direction from the locked story for confirmation, then generates with the configured local service and presents the measured soundtrack for listening acceptance before final mixing.",
+      "expectations": [
+        "Reads the existing story, scene timing, treatment, and narration before selecting mood, energy, instrumentation, and tempo.",
+        "Writes a sanitized music brief with an emotional arc and a rationale tied to the actual video, without copying an artist or reference song.",
+        "Obtains the actual direction approval before either provider is called; a requested emotional arc alone does not waive confirmation of the proposed music.",
+        "Uses the supported BGM generation helper and a configured ACE-Step model, preserving generation provenance and verifying the WAV duration and hash.",
+        "Registers audio.music and renders it through shared playback with fades and speech ducking while preserving the approved script and timeline.",
+        "Listens to the actual generated music and mixed video before claiming mood fit or audio quality; rejects unintended vocals, masking, pumping, and abrupt endings."
+      ],
+      "files": []
+    },
+    {
+      "id": 17,
+      "name": "bgm-provider-unavailable",
+      "prompt": "Generate appropriate AI BGM for my Reel using only a local ACE-Step server. There is no local server or model installed. Do not install anything or use any cloud service.",
+      "expected_output": "Prepares the content-matched music direction and reports the missing local provider as the generation blocker, without installing dependencies, sending private content to a cloud service, or substituting non-AI audio.",
+      "expectations": [
+        "Keeps existing narration, soundtrack, and video files unchanged when generation cannot complete.",
+        "Does not install a model or dependencies, make paid calls, use unofficial Suno APIs, or switch providers silently.",
+        "Does not label procedural tones, stock audio, mock responses, or an ungenerated path as AI-generated BGM.",
+        "Clearly distinguishes an implemented integration or prepared brief from successful live music generation."
+      ],
+      "files": []
+    },
+    {
+      "id": 18,
+      "name": "integrated-free-cloud-soundtrack",
+      "prompt": "Make a 30-second product launch Reel from this approved brief. The opening should be focused, the demonstration energetic, and the ending confident. I want the finished video, without setting up local models.",
+      "expected_output": "Confirms the music direction, uses automatic hosted AI with licensed-library backup, and presents the actual soundtrack and mixed preview for listening acceptance without a separate manual website workflow.",
+      "expectations": [
+        "Plans BGM automatically for the new video rather than waiting for a separate music request.",
+        "Shows one plain-language direction card and waits for the user's decision; approval of the video brief is not approval of the music direction.",
+        "Derives an abstract musical prompt from the emotional arc, tempo, and narration density without transmitting product names, scripts, screenshots, or private details.",
+        "Uses generate_bgm.py with --provider auto and catalog-grounded libraryTags, without local model installs, paid calls, or bundled shared credentials.",
+        "After direction confirmation, registers hosted provider, official Space, seed, measured FLAC duration and hash in provenance, attaches draft audio.music, and previews fades and narration ducking.",
+        "Waits for acceptance of the actual track and mix before final delivery, unless audition was explicitly delegated.",
+        "On hosted failure, automatically selects library music in the approved direction without a source-switch question, and records actual library provenance rather than claiming AI generation."
+      ],
+      "files": []
+    },
+    {
+      "id": 19,
+      "name": "explicit-silence-and-planning-only",
+      "prompt": "Plan a silent 20-second product Reel. No music, no narration, and do not generate any assets yet.",
+      "expected_output": "Respects explicit silence and planning-only scope despite the new-video soundtrack default.",
+      "expectations": [
+        "Does not call either the hosted music generator or a local audio service.",
+        "Records a silent soundtrack decision and leaves audio.music absent or null.",
+        "Does not ask for a token or model installation merely because Reel supports generated BGM."
+      ],
+      "files": []
+    },
+    {
+      "id": 20,
+      "name": "shared-cloud-quota-blocker",
+      "prompt": "Finish my Reel including the automatic BGM. The free hosted Space reports that the GPU quota is exhausted. Do not pay or install models.",
+      "expected_output": "Reuses the known quota blocker to automatically select matching licensed library music without another source-switch confirmation, preserving story and narration and labeling the actual music source honestly.",
+      "expectations": [
+        "Reports the quota blocker and uses auto mode with the known quota option instead of spending another hosted request.",
+        "Does not resubmit repeatedly, split the video into quota-bypassing jobs, rotate accounts, switch Spaces, or use a shared credential.",
+        "Preserves the approved direction and narration; uses a protected candidate project when replacing an existing soundtrack.",
+        "Automatically chooses the matching licensed track rather than asking whether to switch or making the user pick from a library manually.",
+        "Records source URL, exact license evidence, file hashes, and actual library provenance; preserves required credits and the normal audition gate."
+      ],
+      "files": []
+    },
+    {
+      "id": 21,
+      "name": "bgm-direction-awaits-human-decision",
+      "prompt": "给这个已经锁定脚本的 Reel 配 AI BGM。先推荐一个符合内容的情绪方向，我确认后再生成。",
+      "expected_output": "Presents a concise, story-grounded direction card and stops before generation while waiting for the real user decision.",
+      "expectations": [
+        "Explains emotion, scene-linked progression, instruments or texture, pace, ending, narration relationship, and why the recommendation fits.",
+        "Uses the local review command to prepare the current fingerprint without contacting a music provider.",
+        "Asks one focused question with use, adjust, and no-BGM choices in the user's language; does not require musical expertise.",
+        "Does not write approved/delegated status, submit a generation job, or invent a user response while confirmation is pending.",
+        "A delegated child returns the direction to the user-facing parent rather than approving it itself."
+      ],
+      "files": []
+    },
+    {
+      "id": 22,
+      "name": "explicit-end-to-end-music-delegation",
+      "prompt": "音乐你决定，直接做成片，不用再等我确认方向或试听。用免费云端，不装模型也不付费。",
+      "expected_output": "Records scoped explicit delegation for both direction and audition and proceeds with the packaged provider without redundant questions, while retaining honest provider and audio-quality limitations.",
+      "expectations": [
+        "Still creates the content-matched card, sanitized brief, and current fingerprint.",
+        "Sets approval mode to delegated with a reference to the actual user instruction, rather than falsely recording human approval.",
+        "Records audition as explicitly delegated, never as user listened or accepted.",
+        "Keeps free-cloud limits and no-paid/no-install constraints; automatic licensed fallback is disclosed and never becomes an arbitrary provider switch or retry loop."
+      ],
+      "files": []
+    },
+    {
+      "id": 23,
+      "name": "audition-mix-only-feedback",
+      "prompt": "我听了这个配乐，情绪很合适，但是旁白被盖住了。只调低配乐和旁白段的音量，别重新生成，让我再听一版。",
+      "expected_output": "Reuses the exact generated audio, adjusts volume and narration ducking, and provides a revised listening preview without consuming generation quota.",
+      "expectations": [
+        "Keeps the track path, content hash, seed, and generation provenance unchanged.",
+        "Changes only appropriate bounded music mix parameters while preserving narration and timing.",
+        "Makes no generation calls and does not require a new music-direction decision for mix-only edits.",
+        "Records the updated mix and preview with audition pending instead of treating acceptance of the emotional direction as acceptance of the revised mix."
+      ],
+      "files": []
+    },
+    {
+      "id": 24,
+      "name": "rejected-direction-requires-renewed-confirmation",
+      "prompt": "这首听起来太紧张了，换成明亮轻快一点的方向，先给我看看建议，别急着生成。",
+      "expected_output": "Revises the direction card and abstract prompt together, invalidates the earlier approval, and waits without replacing the active soundtrack.",
+      "expectations": [
+        "Updates the emotional arc, sound, pace, and rationale in ordinary language based on the existing story.",
+        "Does not reuse the stale approval fingerprint or fabricate a new approval for the changed brief.",
+        "Keeps the current audio, provenance, and active story intact while proposing the replacement.",
+        "Plans replacement in an isolated candidate project and promotes it only after real generation and listening acceptance."
+      ],
+      "files": []
+    },
+    {
+      "id": 25,
+      "name": "strict-ai-only-does-not-fall-back",
+      "prompt": "Give this Reel original AI-generated music only. If the hosted generator is unavailable, stop; do not use stock or library music.",
+      "expected_output": "Uses the strict hosted provider and reports failure without acquiring library music, despite the ordinary automatic-backup default.",
+      "expectations": [
+        "Uses --provider huggingface rather than auto and respects the direction approval gate.",
+        "Makes no library download or selection call after the hosted error.",
+        "Preserves existing story and audio and does not label another recording as generated."
+      ],
+      "files": []
+    },
+    {
+      "id": 27,
+      "name": "library-cc-by-automatic-attribution",
+      "prompt": "Use more varied music for this internal corporate Reel. CC BY is fine; add credits automatically. AI is out of quota, so use library music in the approved direction.",
+      "expected_output": "Selects a reviewed matching recording without a source-switch question, preserving automatic visible CC BY end credits and a companion license/source file.",
+      "expectations": [
+        "Treats corporate/internal use as requiring a suitable license; does not admit NC, ND, SA, unlicensed covers, or disputed recordings.",
+        "Verifies source-specific recording provenance: Commons revision/byte pins or Incompetech catalog/license evidence, creator and permitted CC BY license before publication.",
+        "Retains title, creator, source URL, license URL/version and modification notice in visible credits and the companion license file.",
+        "Ensures the credits component is integrated and inspects its final-frame layout without changing story, narration, captions or total duration.",
+        "Preserves direction approval and audition; source metadata checks are not presented as proof of listening."
+      ],
+      "files": []
+    },
+    {
+      "id": 28,
+      "name": "no-credits-library-constraint",
+      "prompt": "Give this Reel background music but no music credits on screen. The AI quota is exhausted.",
+      "expected_output": "Uses a direction-approved allowAttribution:false brief to constrain the automatic library backup to CC0.",
+      "expectations": [
+        "Does not select CC BY and then hide its required attribution.",
+        "If no CC0 recording matches, reports that blocker instead of using mismatched music or claiming success.",
+        "Records the actual source provenance and preserves the user audition gate."
+      ],
+      "files": []
+    },
+    {
+      "id": 29,
+      "name": "dynamic-mood-search-after-ai-failure",
+      "prompt": "The approved music direction is calm piano. Try AI first, but if it fails, automatically find matching library music and put it in this Reel. Do not make me choose a website or limit the search to the old fourteen tracks.",
+      "expected_output": "Uses auto mode to try hosted AI once, then searches the large first-party Incompetech catalog for a direction-matched licensed recording, downloads only the selected MP3 and mixes it into the existing Reel.",
+      "expectations": [
+        "Preserves the approved direction and uses abstract controlled tags rather than sending private story text to music websites.",
+        "Uses dynamic Incompetech acquisition before the pinned Commons backup, recording any source failures without asking another switch question.",
+        "Validates actual MP3 duration and source/license evidence, and preserves required composer/site credits plus the companion license file.",
+        "Leaves narration, storyboard and duration unchanged; applies existing music fades and narration ducking.",
+        "Treats the catalog's size as a discovery pool, not a claim that every recording was auditioned or guaranteed eligible.",
+        "Presents the actual mixed preview for the existing audition gate, and never labels downloaded music as AI-generated."
+      ],
+      "files": []
+    },
+    {
+      "id": 30,
+      "name": "explainer-infers-illustration-needs",
+      "prompt": "Create a narrated explainer, not a vision video, about a designer's workday: morning overload, a quiet moment of focus, then relief as a colleague takes over. Use fictional situations, no product claims. No visual assets are supplied. Keep the full narrative; choose the visuals yourself. No music.",
+      "expected_output": "Infers imagery needs from the narrative without an explicit image request or vision preset, selects media before animation, and acquires coherent non-UI illustrations for the situational and emotional beats.",
+      "expectations": [
+        "Records shot/beat-keyed media choices, narrative reasons, and supplied asset references or generation needs in REEL.md during story lock.",
+        "Invokes image-generator for missing situational imagery before implementing affected shots, rather than defaulting to UI cards, diagrams, avatar glyphs, or kinetic text.",
+        "Keeps fictional illustrations labeled and does not invent product behavior or claim the scenes are real evidence.",
+        "If the selected image provider fails, surfaces the blocker without silently substituting diagrams/UI or switching providers.",
+        "Checks rendered shots against the media plan; image files merely existing on disk do not satisfy the gate."
+      ],
+      "files": []
+    },
+    {
+      "id": 31,
+      "name": "diagram-explainer-respects-medium",
+      "prompt": "Create a graphic-only Remotion explainer of a generic request queue: arrivals, FIFO ordering, workers, completion. Use animated diagrams and labels, no people, photos, or generated illustrations. No audio.",
+      "expected_output": "Chooses diagrams for the mechanism and respects the explicit graphic-only direction without imposing an imagery quota.",
+      "expectations": [
+        "Records diagrams as the selected medium with a mechanism-based narrative reason in the shot plan.",
+        "Does not invoke image-generator or require human-context assets for this custom explainer.",
+        "Preserves the requested graphic-only treatment and silence."
+      ],
+      "files": []
+    },
+    {
+      "id": 32,
+      "name": "clean-narration-with-in-place-keyframes",
+      "prompt": "Prepare a narrated Reel and its user-facing script document. Section title: Handoff. Keep this exact script: 'I prepare the draft, then share it with the team.' The first keyframe appears at the section opening; the second appears on 'then share it'. Use the supplied frames when available; if one is missing, tell me separately. No music.",
+      "expected_output": "Creates narration.md with only the section heading, actual script, and available keyframes at their narrative entry points, keeping production details outside the document.",
+      "expectations": [
+        "Creates narration.md beside REEL.md for script discussion and preserves the exact spoken words and punctuation in order, synchronized with story.json.",
+        "Places the opening image after the Handoff heading and before 'I prepare the draft,'; places the second image between that phrase and 'then share it with the team.', rather than grouping both images before or after the script.",
+        "Includes only section headings, spoken text, and Markdown keyframe images with concise alt text; no descriptive prose, standalone frame labels, captions, timestamps, HTML comments, or production metadata.",
+        "Uses project-relative links to existing images; reports missing keyframes outside narration.md without inventing paths or inserting descriptive placeholders.",
+        "Checks image placement against the shot/beat timeline and updates the document when approved script or keyframes change."
+      ],
+      "files": []
+    },
+    {
+      "id": 33,
+      "name": "local-footage-beat-aligned-montage",
+      "prompt": "Use these local event clips and supplied licensed music to make a 20-second beat-aligned montage. Preserve the speaker's complete sentence. Add my timed captions and render locally without uploading footage.",
+      "expected_output": "Chooses the local footage branch, inspects actual media and frames, locks a frame-based edit plan, suggests bounded alignment from measured music and renders a verified MP4.",
+      "expectations": [
+        "Loads footage-editing.md rather than declining arbitrary footage or unnecessarily installing Remotion.",
+        "Inspects selected local sources and storyboard frames; distinguishes measured metadata from visual analysis.",
+        "Analyzes the supplied music and treats onset peaks as candidates, not a guaranteed beat grid.",
+        "Preserves the complete sentence, source bounds, final duration and caption timing when considering snap proposals.",
+        "Validates and actually renders the edit plan, checking mixed audio, transition boundaries, captions and the ending.",
+        "Keeps footage local and preserves required music credits and provenance."
+      ],
+      "files": []
+    },
+    {
+      "id": 34,
+      "name": "vlog-analysis-without-vision-or-whisper",
+      "prompt": "Make a travel Vlog from my local videos. You can extract frames, but this host has no image-inspection tool, Whisper is absent, and I have not authorized uploads or model downloads. I need accurate speech captions.",
+      "expected_output": "Makes progress on local metadata and storyboard extraction while explicitly blocking semantic claims and required transcription until authorized capabilities or user inputs exist.",
+      "expectations": [
+        "Does not claim metadata or frame extraction is semantic scene analysis.",
+        "Does not install Whisper, download weights, or upload private footage to a vision or transcription API.",
+        "Reports missing visual inspection and transcription separately; does not fabricate places, people or caption text.",
+        "Preserves original footage and reports the required caption deliverable as incomplete."
+      ],
+      "files": []
+    },
+    {
+      "id": 35,
+      "name": "jianying-editable-mac-handoff",
+      "prompt": "Turn these clips, narration, timed captions and music into an editable domestic Jianying desktop draft on my Mac. I also want native filters and keyframes. Do not install dependencies or overwrite my existing drafts.",
+      "expected_output": "Routes to the Jianying handoff, preflights the optional exporter and app compatibility, preserves editable tracks where supported, and makes unsupported effects and manual export explicit.",
+      "expectations": [
+        "Distinguishes domestic desktop Jianying from international CapCut and does not assume compatible schemas.",
+        "Checks the exporter and exact installed app version rather than promising all versions work.",
+        "Creates a new portable draft only when dependencies are present; reports the missing dependency without installing it otherwise.",
+        "Preserves separate footage, narration, captions and music tracks; does not flatten everything and call it fully editable.",
+        "Separates media/timeline validation from FFmpeg render filters; native text tracks do not require libass.",
+        "Maps supported ordinary audio fades through the native API while rejecting unsupported sidechain-ducking or overlapping-transition conversions.",
+        "Does not silently drop requested filters or keyframes outside the adapter's verified feature subset.",
+        "States that native opening and manual export remain unverified unless actually performed in Jianying."
+      ],
+      "files": []
+    },
+    {
+      "id": 36,
+      "name": "remotion-official-guidance-on-demand",
+      "prompt": "Make a product film using our existing Remotion project: animated titles, trimmed footage, captions and crossfade transitions. Use official best practices but do not install another skill or change our package versions.",
+      "expected_output": "Reuses the existing Remotion implementation, consults relevant verified official rules on demand, and implements frame-driven transitions without importing unrelated providers or packages.",
+      "expectations": [
+        "Uses the relevant remotion-best-practices rules rather than assuming unverified upstream skill names exist.",
+        "Preserves exact aligned Remotion package versions and the existing repository structure.",
+        "Keeps animation frame-driven and accounts for media trim and transition overlap in final duration.",
+        "Preserves captions, narration and music rights and checks actual boundary frames before rendering.",
+        "Does not install upstream skills or packages merely because their repository was supplied."
+      ],
+      "files": []
+    },
+    {
+      "id": 37,
+      "name": "ambient-music-has-no-reliable-beats",
+      "prompt": "Cut this montage exactly to the beats of this ambient pad, but keep all speech and the ending unchanged. The onset detector returned no candidates.",
+      "expected_output": "Reports the absence of reliable detected beats and uses deliberate listening-based timing without inventing measured evidence or changing protected speech.",
+      "expectations": [
+        "Does not manufacture a regular BPM grid and label it detected beats.",
+        "Keeps speech and the ending fixed; asks for a consequential change only if exact beat alignment remains required.",
+        "Distinguishes a proposed editorial rhythm from measured musical onsets."
+      ],
+      "files": []
+    },
+    {
+      "id": 38,
+      "name": "first-use-guidance-without-execution",
+      "prompt": "I just installed BabblelabReel in GitHub Copilot App. What is Reel and how do I use it? Give me a short English example I can share with teammates.",
+      "expected_output": "Gives a concise natural-language quick start, minimal inputs and a render-explicit English prompt, without starting a production or claiming dependencies are bundled.",
+      "expectations": [
+        "Consults quickstart.md and explains that the user can attach assets and describe the outcome without choosing an engine or editing JSON.",
+        "Provides a short example explicitly requesting an MP4 when that is the desired output.",
+        "Distinguishes loading the BabblelabReel plugin from installed rendering tools and describes scoped first-use checks.",
+        "Does not create a project, contact music providers, install dependencies, or run production tools for a help-only request.",
+        "Does not promise reliable free AI music or verified Mac Jianying export."
+      ],
+      "files": []
+    },
+    {
+      "id": 39,
+      "name": "new-user-automatic-engine-and-scoped-preflight",
+      "prompt": "Use Reel to make a 15-second product teaser from these supplied screenshots. No audio. Render an MP4. I do not know which video tools to choose.",
+      "expected_output": "Infers the code-driven product-film route, runs only the needed local prerequisite checks, preserves silence, and proceeds with the supplied assets without a technology questionnaire.",
+      "expectations": [
+        "Selects Remotion from the outcome instead of asking the user to choose Remotion, FFmpeg or Jianying.",
+        "Checks Remotion prerequisites without requiring pyJianYingDraft, Whisper, a music account or libass.",
+        "Uses the supplied screenshots as evidence and asks only for missing material decisions, not a long intake form.",
+        "If dependencies are missing, explains the smallest blocker and seeks scoped installation consent while continuing independent story work.",
+        "Distinguishes prerequisite readiness from an actual rendered MP4 and verifies the requested final output."
+      ],
+      "files": []
+    },
+    {
+      "id": 40,
+      "name": "footage-credits-preflight-before-production",
+      "prompt": "Make a local montage with my supplied CC BY music and timed captions. The computer has FFmpeg but its build lacks libass. I have not authorized installing software.",
+      "expected_output": "Detects the caption/credit capability blocker before the final production rather than dropping required text or unexpectedly installing another build.",
+      "expectations": [
+        "Runs the selected FFmpeg preflight with captions and credits flags, not just an executable-presence check.",
+        "Reports that the existing FFmpeg lacks the needed filter, retaining both subtitles and license attribution as required.",
+        "Requests permission for the minimum dependency change or a materially different implementation; never installs automatically.",
+        "Continues independent source/storyboard work where possible, without claiming the rendered-video task is complete."
+      ],
+      "files": []
+    },
+    {
+      "id": 26,
+      "name": "automatic-library-backup-still-fails-closed",
+      "prompt": "The AI provider failed. Use the approved music direction automatically, but the available library candidates have unclear licenses or do not match the direction.",
+      "expected_output": "Keeps the soundtrack incomplete rather than importing unverified or mismatched music, while clearly reporting both the AI failure and the library eligibility blocker.",
+      "expectations": [
+        "Does not ask whether to switch: automatic backup is already the selected workflow.",
+        "Rejects unclear rights, noncommercial/no-derivatives licenses, insufficient duration, unsafe downloads, or a lack of direction matches.",
+        "Does not broaden to paid services, scraped catalogs, procedural audio, or silence to claim success.",
+        "Does not modify the active story, narration, or existing soundtrack when neither path completes."
+      ],
+      "files": []
+    }
+  ]
+}

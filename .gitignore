@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+.babblelabreel/
+.DS_Store
+*.wav
+*.mp4
+*.mp3
+*.onnx

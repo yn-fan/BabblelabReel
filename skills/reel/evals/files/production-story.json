@@ -1,0 +1,163 @@
+{
+  "title": "Approve a design direction",
+  "archetype": "product-task-demo",
+  "preset": "custom",
+  "treatment": "neutral",
+  "scriptLocked": false,
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "brand": {
+    "background": "#111214",
+    "surface": "#f6f5f2",
+    "foreground": "#f6f5f2",
+    "surfaceForeground": "#17181a",
+    "muted": "#a7a8ac",
+    "accent": "#dedbd2"
+  },
+  "sourceTruth": [
+    {
+      "id": "spec-approval-flow",
+      "type": "supplied-spec",
+      "ref": "eval fixture approval-flow spec",
+      "proves": "The review action acknowledges submission before showing approval"
+    }
+  ],
+  "captures": [],
+  "scenes": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "durationSeconds": 3,
+      "purpose": "Introduce the approval task",
+      "headline": "Approve a design direction",
+      "detail": "A short source-backed product task.",
+      "items": [],
+      "narration": "",
+      "action": "Reveal the task",
+      "stateBefore": "The task is not introduced",
+      "stateAfter": "The task is clear",
+      "sourceRef": "spec-approval-flow"
+    },
+    {
+      "id": "task",
+      "kind": "task",
+      "durationSeconds": 9,
+      "purpose": "Show the complete approval interaction",
+      "headline": "Review and approve",
+      "detail": "The product acknowledges the action before the result.",
+      "items": [
+        "A design direction is selected",
+        "Approval is submitted and acknowledged",
+        "The direction is marked approved"
+      ],
+      "narration": "",
+      "action": "Show selection, submission acknowledgement, and approval",
+      "stateBefore": "A direction is selected but not approved",
+      "stateAfter": "The selected direction is approved",
+      "sourceRef": "spec-approval-flow"
+    },
+    {
+      "id": "conclusion",
+      "kind": "close",
+      "durationSeconds": 4,
+      "purpose": "Confirm the completed task",
+      "headline": "Direction approved",
+      "detail": "The demonstrated task is complete.",
+      "items": [],
+      "narration": "",
+      "action": "Hold the resulting state",
+      "stateBefore": "Approval is visible",
+      "stateAfter": "The story is complete",
+      "sourceRef": "spec-approval-flow"
+    }
+  ],
+  "shots": [
+    {
+      "id": "opening-1",
+      "sceneId": "opening",
+      "startSeconds": 0,
+      "durationSeconds": 3,
+      "dominantSubject": "Approval task",
+      "camera": "static",
+      "contentAction": "Reveal the task",
+      "holdSeconds": 1,
+      "boundary": "cut"
+    },
+    {
+      "id": "task-1",
+      "sceneId": "task",
+      "startSeconds": 3,
+      "durationSeconds": 9,
+      "dominantSubject": "Approval control and result",
+      "camera": "controlled-crop",
+      "contentAction": "Select, acknowledge, and approve",
+      "holdSeconds": 2,
+      "boundary": "cut"
+    },
+    {
+      "id": "conclusion-1",
+      "sceneId": "conclusion",
+      "startSeconds": 12,
+      "durationSeconds": 4,
+      "dominantSubject": "Approved result",
+      "camera": "static",
+      "contentAction": "Hold the result",
+      "holdSeconds": 3,
+      "boundary": "end"
+    }
+  ],
+  "beats": [
+    {
+      "id": "opening-reveal",
+      "sceneId": "opening",
+      "shotId": "opening-1",
+      "atSeconds": 0.5,
+      "kind": "action",
+      "anchorText": "",
+      "purpose": "Reveal the approval task"
+    },
+    {
+      "id": "task-before",
+      "sceneId": "task",
+      "shotId": "task-1",
+      "atSeconds": 3.5,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Show the selected direction before approval"
+    },
+    {
+      "id": "task-acknowledgement",
+      "sceneId": "task",
+      "shotId": "task-1",
+      "atSeconds": 7,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Show acknowledgement before approval"
+    },
+    {
+      "id": "task-result",
+      "sceneId": "task",
+      "shotId": "task-1",
+      "atSeconds": 10,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Show the approved resulting state"
+    },
+    {
+      "id": "conclusion-hold",
+      "sceneId": "conclusion",
+      "shotId": "conclusion-1",
+      "atSeconds": 12.5,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Begin the final hold"
+    }
+  ],
+  "audio": {
+    "narration": null
+  },
+  "captionCues": []
+}

@@ -1,0 +1,63 @@
+{
+  "id": "tim-kochjar-reference",
+  "status": "optional",
+  "provenance": "Observable attributes from Tim Kochjar's public Remotion demo; exact prompt and production system are unavailable.",
+  "dimensions": [
+    {
+      "name": "shot-scale",
+      "referenceEvidence": "Observable full-window views and controlled UI close-ups; exact camera coordinates and easing are unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "edit-pacing",
+      "referenceEvidence": "Observable alternation between sparse claims and detailed product frames; exact shot timing and edit map are unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "camera-continuity",
+      "referenceEvidence": "The result reads as one continuous camera between brand and UI worlds; implementation geometry is unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "composition",
+      "referenceEvidence": "Observable high-key field, generous negative space, centered prompt or claims, and readable UI evidence",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "typography",
+      "referenceEvidence": "Observable crisp dark type with restrained copy; font, sizes, weights, tracking, and token system are unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "source-asset-fidelity",
+      "referenceEvidence": "Detailed product UI is visible; original captures, component source, generation method, and asset pipeline are unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "transitions",
+      "referenceEvidence": "Verified as one Remotion timeline; exact transition timing, masks, coordinates, and rejected variants are unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    },
+    {
+      "name": "audio-rhythm",
+      "referenceEvidence": "AAC audio is present; sound design, cue sheet, mix, and relationship between accents and edits are unknown",
+      "transferDecision": "REPLACE_ME",
+      "implementation": "REPLACE_ME",
+      "verification": "REPLACE_ME"
+    }
+  ]
+}

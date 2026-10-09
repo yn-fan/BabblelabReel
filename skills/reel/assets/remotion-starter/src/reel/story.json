@@ -1,0 +1,244 @@
+{
+  "title": "REPLACE_ME product story",
+  "archetype": "narrated-workflow",
+  "preset": "custom",
+  "treatment": "neutral",
+  "scriptLocked": false,
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "brand": {
+    "background": "#111214",
+    "surface": "#f6f5f2",
+    "foreground": "#f6f5f2",
+    "surfaceForeground": "#17181a",
+    "muted": "#a7a8ac",
+    "accent": "#dedbd2"
+  },
+  "sourceTruth": [
+    {
+      "id": "source-1",
+      "type": "concept",
+      "ref": "REPLACE_ME supplied spec, capture, code, or user statement",
+      "proves": "REPLACE_ME what this source establishes"
+    }
+  ],
+  "captures": [],
+  "scenes": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "durationSeconds": 4,
+      "purpose": "Preserve the required introduction",
+      "headline": "REPLACE_ME opening",
+      "detail": "State why this story begins here.",
+      "items": [],
+      "narration": "",
+      "action": "Reveal the opening phrase",
+      "stateBefore": "The subject is not introduced",
+      "stateAfter": "The subject and context are clear",
+      "sourceRef": "source-1"
+    },
+    {
+      "id": "context",
+      "kind": "context",
+      "durationSeconds": 7,
+      "purpose": "Establish the problem or workflow context",
+      "headline": "REPLACE_ME context",
+      "detail": "Use the supplied source instead of a generic promise.",
+      "items": [
+        "REPLACE_ME first source-backed fact",
+        "REPLACE_ME second source-backed fact"
+      ],
+      "narration": "",
+      "action": "Shift focus between the two facts",
+      "stateBefore": "The viewer knows the subject",
+      "stateAfter": "The viewer understands the context",
+      "sourceRef": "source-1"
+    },
+    {
+      "id": "task",
+      "kind": "task",
+      "durationSeconds": 12,
+      "purpose": "Demonstrate one complete product action",
+      "headline": "REPLACE_ME product task",
+      "detail": "Replace this conceptual surface with supplied UI or source-backed code.",
+      "items": [
+        "REPLACE_ME entry state",
+        "REPLACE_ME action and acknowledgement",
+        "REPLACE_ME resulting state"
+      ],
+      "narration": "",
+      "action": "Show before, action, acknowledgement, and result",
+      "stateBefore": "REPLACE_ME source-backed state before action",
+      "stateAfter": "REPLACE_ME source-backed resulting state",
+      "sourceRef": "source-1"
+    },
+    {
+      "id": "outcome",
+      "kind": "outcome",
+      "durationSeconds": 7,
+      "purpose": "Explain the demonstrated outcome",
+      "headline": "REPLACE_ME outcome",
+      "detail": "Use evidence from the source; do not invent a proof metric.",
+      "items": [],
+      "narration": "",
+      "action": "Replace the prior state with the resulting state",
+      "stateBefore": "The result is visible",
+      "stateAfter": "The result is understood",
+      "sourceRef": "source-1"
+    },
+    {
+      "id": "conclusion",
+      "kind": "close",
+      "durationSeconds": 5,
+      "purpose": "Preserve the required conclusion",
+      "headline": "REPLACE_ME conclusion",
+      "detail": "A CTA is optional and should come from the brief.",
+      "items": [],
+      "narration": "",
+      "action": "Hold the conclusion",
+      "stateBefore": "The outcome is understood",
+      "stateAfter": "The story is complete",
+      "sourceRef": "source-1"
+    }
+  ],
+  "shots": [
+    {
+      "id": "opening-1",
+      "sceneId": "opening",
+      "startSeconds": 0,
+      "durationSeconds": 4,
+      "dominantSubject": "REPLACE_ME opening subject",
+      "camera": "push-in",
+      "contentAction": "Reveal the opening phrase",
+      "holdSeconds": 1,
+      "boundary": "cut"
+    },
+    {
+      "id": "context-1",
+      "sceneId": "context",
+      "startSeconds": 4,
+      "durationSeconds": 7,
+      "dominantSubject": "REPLACE_ME context subject",
+      "camera": "pan-left",
+      "contentAction": "Shift focus between source-backed facts",
+      "holdSeconds": 1,
+      "boundary": "cut"
+    },
+    {
+      "id": "task-1",
+      "sceneId": "task",
+      "startSeconds": 11,
+      "durationSeconds": 12,
+      "dominantSubject": "REPLACE_ME product action",
+      "camera": "controlled-crop",
+      "contentAction": "Show before, acknowledgement, and result",
+      "holdSeconds": 2,
+      "boundary": "cut"
+    },
+    {
+      "id": "outcome-1",
+      "sceneId": "outcome",
+      "startSeconds": 23,
+      "durationSeconds": 7,
+      "dominantSubject": "REPLACE_ME resulting state",
+      "camera": "pull-out",
+      "contentAction": "Resolve the demonstrated outcome",
+      "holdSeconds": 2,
+      "boundary": "cut"
+    },
+    {
+      "id": "conclusion-1",
+      "sceneId": "conclusion",
+      "startSeconds": 30,
+      "durationSeconds": 5,
+      "dominantSubject": "REPLACE_ME conclusion",
+      "camera": "static",
+      "contentAction": "Hold the conclusion",
+      "holdSeconds": 2,
+      "boundary": "end"
+    }
+  ],
+  "beats": [
+    {
+      "id": "opening-reveal",
+      "sceneId": "opening",
+      "shotId": "opening-1",
+      "atSeconds": 0.5,
+      "kind": "action",
+      "anchorText": "",
+      "purpose": "Reveal the opening phrase"
+    },
+    {
+      "id": "context-first-fact",
+      "sceneId": "context",
+      "shotId": "context-1",
+      "atSeconds": 4.5,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Focus the first source-backed fact"
+    },
+    {
+      "id": "context-second-fact",
+      "sceneId": "context",
+      "shotId": "context-1",
+      "atSeconds": 8,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Focus the second source-backed fact"
+    },
+    {
+      "id": "task-before",
+      "sceneId": "task",
+      "shotId": "task-1",
+      "atSeconds": 11.5,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Show the source-backed state before action"
+    },
+    {
+      "id": "task-action",
+      "sceneId": "task",
+      "shotId": "task-1",
+      "atSeconds": 16,
+      "kind": "action",
+      "anchorText": "",
+      "purpose": "Show the product acknowledgement"
+    },
+    {
+      "id": "task-result",
+      "sceneId": "task",
+      "shotId": "task-1",
+      "atSeconds": 20,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Show the source-backed resulting state"
+    },
+    {
+      "id": "outcome-resolve",
+      "sceneId": "outcome",
+      "shotId": "outcome-1",
+      "atSeconds": 25,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Resolve the resulting state"
+    },
+    {
+      "id": "conclusion-hold",
+      "sceneId": "conclusion",
+      "shotId": "conclusion-1",
+      "atSeconds": 31,
+      "kind": "state",
+      "anchorText": "",
+      "purpose": "Begin the final readable hold"
+    }
+  ],
+  "audio": {
+    "narration": null,
+    "music": null
+  },
+  "captionCues": []
+}
