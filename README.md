@@ -1,8 +1,8 @@
 # BabblelabReel
 
-从 Emma Reel 独立拆出的完整视频技能包。无需安装 Emma；保留原有制作流程、
-脚本、模板、素材索引、参考资料和测试。公开名字为 **BabblelabReel**，
-机器标识为 `babblelabreel`。内部 `skills/reel/` 路径保留以兼容脚本。
+**BabblelabReel** 是一个可独立使用的视频创作技能包，支持视频下载、压缩、
+素材混剪、分镜、配乐、英文配音、图片生成和剪映草稿交付。
+包含制作流程、脚本、模板、素材索引、参考资料和测试，技能名为 `babblelabreel`。
 
 ## 包含什么
 
@@ -15,39 +15,26 @@
 | Remotion | 完整 TypeScript 模板、字幕/旁白/音乐轨、署名组件、产品发布和愿景视频预设、故事及音乐验证脚本 |
 | BGM | 情绪匹配、托管 AI 与已有本地 ACE-Step 服务适配、AI 不可用时授权曲库回退、许可证/来源记录、淡入淡出与旁白避让 |
 | TTS | 完整 Audio Generator：英文基础模式和 Kokoro 增强模式，WAV 与来源记录。增强模型需另行下载；不包含中文 TTS |
-| 图片生成 | Microsoft 365 Copilot、MAI Playground 的可见浏览器流程，以及 Azure OpenAI 的发现/配置/生成脚本；仍需相应工具和账号 |
+| 图片生成 | 支持已适配服务的浏览器操作流程与 API 配置、生成脚本；需相应工具、账号和服务权限，具体支持范围见包内图片生成说明 |
 | 剪映草稿 | 实验性国内桌面剪映草稿适配、分轨、转场/关键帧交付说明；不是剪映软件，Mac 打开/最终导出仍未验证 |
 
 曲库包内是音乐目录、检索适配器和许可处理，不包含第三方音乐录音全集。
 模型权重、FFmpeg、yt-dlp、Node、Remotion 的 node_modules、剪映软件、账号、
 cookies、API 密钥以及个人素材都没有打包。安装技能不等于这些依赖已经可用。
 
-## Install
+## 安装到 Codex 或 Claude Code
 
-### 方式一：作为 GitHub Copilot CLI 本地插件
+在 Codex 或 Claude Code 中发送：
 
-解压后保留整个文件夹，不能只复制内部 `SKILL.md`。在终端执行，路径改为
-你实际保存的位置：
-
-无需安装，先在一个新会话中加载：
-
-```bash
-copilot --plugin-dir "/absolute/path/to/BabblelabReel"
+```text
+Install https://github.com/yn-fan/BabblelabReel as a personal skill. Keep the entire repo intact.
 ```
 
-若要持久安装，再执行：
+完整仓库的根目录 `SKILL.md` 是技能入口；请保留所有子目录，不能只复制单个文件。
+安装完成后，说“用 babblelabreel……”即可开始。如果没有识别到技能，新建会话或重启工具再试。
+FFmpeg、配音模型等外部依赖按具体任务安装。Claude 普通网页对话不适用上述本地安装方式。
 
-```bash
-copilot plugin marketplace add "/absolute/path/to/BabblelabReel"
-copilot plugin install babblelabreel@babblelab
-```
-
-新建 Copilot 会话，选择 **BabblelabReel** agent 或调用 `babblelabreel` 技能。
-插件带有独立的主技能、配音子技能和图片子技能，不会替换已有 Emma。
-上述命令需要支持插件及本地 marketplace 的 Copilot CLI；不是普通网页聊天命令。
-本次交付仅创建包，没有改动你的实际插件安装或注册。
-
-### 方式二：在支持本地 Skills 的工具里使用
+### 其他支持本地 Skills 的工具
 
 把**整个** `BabblelabReel` 文件夹放进该工具支持的 skill 目录，使用根目录
 `SKILL.md` 作为入口。或者让可读取本地文件的 Agent 读取本包 `AGENTS.md`。
@@ -88,16 +75,16 @@ export BABBLELABREEL_USER_HOME="$HOME/BabblelabReelData"
 python3 tools/scripts/user_paths.py home
 ```
 
-未配置时，在可用的 OneDrive 下使用 `BabblelabReel` 文件夹，否则使用
-`~/BabblelabReel`。不读取 Emma 的用户配置，不复制或迁移原有 Emma 产物。
+未配置时，优先在路径解析器检测到的可用云盘目录下使用 `BabblelabReel` 文件夹，
+否则使用 `~/BabblelabReel`。用户配置和产物独立保存。
+如需固定保存位置，请显式设置上面的环境变量。
 不要把产物写进安装缓存。下载、模型与付费服务仍受原来的授权规则约束。
 
 ## 来源、验证和更新
 
 `PROVENANCE.json` 记录源代码提交与完整文件清单；
 `SHA256SUMS.json` 可供完整性比对。`VERIFICATION.md` 记录本次打包验证范围。
-这是本地独立快照，不会自动跟随 Emma 更新。
+这是独立快照，不会自动同步上游更新。
 
-保留来源署名与第三方依赖/模型/素材的许可边界。原仓库未授予新的开源
-再分发许可；本包不擅自把源代码、模型或音乐改为 MIT 等许可证。
-对外发布前需确认你拥有所需权限。
+来源署名与第三方许可说明见 [NOTICE.md](NOTICE.md)。
+本包不另行授予源代码、模型或音乐的开源许可；使用与再分发须遵守各自的许可条件。
